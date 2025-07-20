@@ -36,6 +36,16 @@ namespace myTiles {
     export const tile18 = image.ofBuffer(hex``);
     //% fixedInstance jres blockIdentity=images._tile
     export const tile19 = image.ofBuffer(hex``);
+    //% fixedInstance jres blockIdentity=images._tile
+    export const tile17 = image.ofBuffer(hex``);
+    //% fixedInstance jres blockIdentity=images._tile
+    export const tile16 = image.ofBuffer(hex``);
+    //% fixedInstance jres blockIdentity=images._tile
+    export const tile20 = image.ofBuffer(hex``);
+    //% fixedInstance jres blockIdentity=images._tile
+    export const tile21 = image.ofBuffer(hex``);
+    //% fixedInstance jres blockIdentity=images._tile
+    export const tile22 = image.ofBuffer(hex``);
 
     helpers._registerFactory("tilemap", function(name: string) {
         switch(helpers.stringTrim(name)) {
@@ -59,7 +69,7 @@ namespace myTiles {
 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 
 `, [myTiles.transparency16,myTiles.tile1,sprites.vehicle.roadHorizontal,sprites.vehicle.roadIntersection2,sprites.vehicle.roadTurn1,sprites.vehicle.roadVertical,sprites.vehicle.roadTurn3,sprites.vehicle.roadTurn2,sprites.vehicle.roadTurn4,sprites.castle.tileGrass1,sprites.vehicle.roadIntersection3,sprites.vehicle.roadIntersection4,sprites.vehicle.roadIntersection1,myTiles.tile2,myTiles.tile3,myTiles.tile4,sprites.castle.tileGrass3,myTiles.tile5,myTiles.tile6], TileScale.Sixteen);
             case "niveau2":
-            case "niveau2":return tiles.createTilemap(hex`14000f000401010101010101010101010101010101010105060b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b06060b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b06060b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b06060b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b06060b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b06060b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b06060b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b06060b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b06060b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b06060b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b06060b08050b0b0b0b0b0b0b0b0b0b0b0b0b0b0b06060b0b060b0b0b0b0b0b0b0b0b0b0b0b0b0b0b06060b0b060b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0602090a0701010101010101010101010101010103`, img`
+            case "niveau2":return tiles.createTilemap(hex`14000f000401010d01010101010101010101010101010105060b0b060b0b0b0b0b0b0b0b0b0b0b0b0b0b0b06060b0b060b0b0b0b0b0b0b0b0b0b0b0b0b0b0b06060b0b060b0b0b0b0b0b0b0b0b0b0b0b0b0b0b06060b0b060b0b0b0b0b0b0b0b0b0b0b0b0b0b0b06060b0b060b0b0b0b0b0b0b0b0b0b0b0b0b0b0b06060b0b060b0b0b0b0b0b0b0b0b0b0b0b0b0b0b06060b0b060b0b0b0b0b0b0b0b0b0b0b0b0b0b0b06060b0b0f0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b06060b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b06060b0b0e0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b06060b080c0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b06060b0b060b0b0b0b0b0b0b0b0b0b0b0b0b0b0b06060b0b060b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0602090a0701010101010101010101010101010103`, img`
 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 
 2 . . . . . . . . . . . . . . . . . . 2 
 2 . . . . . . . . . . . . . . . . . . 2 
@@ -75,7 +85,7 @@ namespace myTiles {
 2 . . 2 . . . . . . . . . . . . . . . 2 
 2 . . 2 . . . . . . . . . . . . . . . 2 
 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 
-`, [myTiles.transparency16,myTiles.tile7,myTiles.tile8,myTiles.tile9,myTiles.tile10,myTiles.tile11,myTiles.tile12,myTiles.tile13,myTiles.tile14,myTiles.tile15,myTiles.tile18,myTiles.tile19], TileScale.Sixteen);
+`, [myTiles.transparency16,myTiles.tile7,myTiles.tile8,myTiles.tile9,myTiles.tile10,myTiles.tile11,myTiles.tile12,myTiles.tile13,myTiles.tile14,myTiles.tile15,myTiles.tile18,myTiles.tile19,myTiles.tile16,myTiles.tile20,myTiles.tile21,myTiles.tile22], TileScale.Sixteen);
         }
         return null;
     })
@@ -117,6 +127,16 @@ namespace myTiles {
             case "tile18":return tile18;
             case "myTile17":
             case "tile19":return tile19;
+            case "myTile15":
+            case "tile17":return tile17;
+            case "myTile14":
+            case "tile16":return tile16;
+            case "myTile18":
+            case "tile20":return tile20;
+            case "myTile19":
+            case "tile21":return tile21;
+            case "myTile20":
+            case "tile22":return tile22;
         }
         return null;
     })

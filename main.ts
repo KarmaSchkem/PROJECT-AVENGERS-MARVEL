@@ -2,23 +2,7 @@ namespace SpriteKind {
     export const loc = SpriteKind.create()
     export const Map = SpriteKind.create()
 }
-browserEvents.Shift.onEvent(browserEvents.KeyEvent.Pressed, function () {
-    sprites.destroyAllSpritesOfKind(SpriteKind.Map)
-    myMinimap = minimap.minimap(MinimapScale.Half, 1, 15)
-    minimap.includeSprite(myMinimap, sprite_loc, MinimapSpriteScale.MinimapScale)
-    mapSprite = sprites.create(minimap.getImage(myMinimap), SpriteKind.Map)
-})
-scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile4`, function (sprite, location) {
-    if (browserEvents.E.isPressed()) {
-        tiles.setCurrentTilemap(tilemap`niveau2`)
-        scene.setBackgroundColor(12)
-    }
-})
-browserEvents.Shift.onEvent(browserEvents.KeyEvent.Released, function () {
-    sprites.destroyAllSpritesOfKind(SpriteKind.Map)
-    scene.cameraFollowSprite(mySprite)
-})
-function boot () {
+function Game () {
     scene.setBackgroundColor(7)
     tiles.setCurrentTilemap(tilemap`niveau1`)
     sprite_loc = sprites.create(img`
@@ -63,15 +47,31 @@ function boot () {
     tiles.placeOnRandomTile(mySprite, assets.tile`myTile3`)
     scene.cameraFollowSprite(mySprite)
 }
-let mySprite: Sprite = null
+browserEvents.Shift.onEvent(browserEvents.KeyEvent.Pressed, function () {
+    sprites.destroyAllSpritesOfKind(SpriteKind.Map)
+    myMinimap = minimap.minimap(MinimapScale.Half, 1, 15)
+    minimap.includeSprite(myMinimap, sprite_loc, MinimapSpriteScale.MinimapScale)
+    mapSprite = sprites.create(minimap.getImage(myMinimap), SpriteKind.Map)
+})
+scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile4`, function (sprite, location) {
+    if (browserEvents.E.isPressed()) {
+        tiles.setCurrentTilemap(tilemap`niveau2`)
+        scene.setBackgroundColor(12)
+    }
+})
+browserEvents.Shift.onEvent(browserEvents.KeyEvent.Released, function () {
+    sprites.destroyAllSpritesOfKind(SpriteKind.Map)
+    scene.cameraFollowSprite(mySprite)
+})
 let mapSprite: Sprite = null
-let sprite_loc: Sprite = null
 let myMinimap: minimap.Minimap = null
+let mySprite: Sprite = null
+let sprite_loc: Sprite = null
 namespace userconfig {
     export const ARCADE_SCREEN_WIDTH = 320
     export const ARCADE_SCREEN_HEIGHT = 240
 }
-boot()
+Game()
 game.onUpdateInterval(10, function () {
     if (browserEvents.Shift.isPressed()) {
         myMinimap = minimap.minimap(MinimapScale.Half, 1, 15)
